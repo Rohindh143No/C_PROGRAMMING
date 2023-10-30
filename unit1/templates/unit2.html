@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+    h2 {
+        text-align: center;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        height: auto;
+        width: auto;
+    }
+    
+    pre {
+        background-color: teal;
+        border-style: solid;
+        border-width: 5px;
+        padding: 5px 5px;
+    }
+    
+    ul {
+        background-color: lightgreen;
+        border-style: solid;
+        border-width: medium;
+        width: auto;
+        height: auto;
+        border-width: 5px;
+        padding: 20px 35px;
+    }
+    
+    mark {
+        background-color: lime;
+        text-transform: capitalize;
+    }
+    
+    li {
+        color: red;
+    }
+    
+    p {
+        background-colour:; /* not defined here */
+        text-color: white;
+        line-height: 1.6;
+        text-transform: capitalize;
+    }
+    
+    div {
+        background-color: slategrey;
+        border-style: solid;
+        border-width: medium;
+        text-align: justify;
+        border-width: 3;
+        height: auto;
+        width: auto;
+        padding: 20px 10px 20px 10px;
+    }
+    
+    table, th, td {
+        border: 1px solid;
+    }
+    
+    table(
+    
+    )
+    
+    th {
+        background-color: dodgerblue;
+    }
+    
+    td {
+        background-color: mediumseagreen
+    }
+    
+    .fa {
+        padding: 20px;
+        font-size: 20px;
+        width: 200px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+    
+    .fa-instagram {
+        background-image: linear-gradient(135deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFC045, #FFDC80);
+        color: black;
+        height: auto;
+        width: auto;
+        position: relative;
+        top: 5px;
+        left: 22px;
+        bottom: 10px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<head>
+
+</head>
+
+<body style="background-color: aqua;">
+  <h1 style="text-align:center";>UNIT - 2</h1>
+
+  <a href="https://instagram.com/romeo_sk_ks?igshid=YTQwZjQ0NmI0OA==" class="fa fa-instagram">--ASK YOUR DOUBTS HERE!!</a>
+
+  <br><br>
+  <h2>Concept 1: INTRODUCTION TO ARRAYS AND STRINGS</h2>
+
+  <div sytle="background-color:black">
+    <mark>Arrays:</mark> Arrays are collections of elements of the same data type stored in contiguous memory locations. They allow you to group multiple values under one name.
+    <p>Explanation: Arrays are a fundamental data structure in C. They let you store multiple elements of the same data type in a contiguous block of memory. Each element is accessed by an index, starting from 0. Arrays are useful for working with collections of data, such as a list of numbers or characters.</p>
+    <hr>
+
+    <mark>Declaration and Initialization:</mark> In C, arrays are declared by specifying the data type of the elements and the number of elements in square brackets. You can initialize arrays during declaration or later in your code.
+    <p>Explanation: When declaring an array, you specify its data type (e.g., int, char) and the number of elements it can hold. For example, `int myArray[5];` declares an integer array that can hold 5 integers. You can also initialize the array with values like `int myArray[5] = {1, 2, 3, 4, 5};`.</p>
+    <hr>
+
+    <mark>One-Dimensional Array:</mark> A one-dimensional array is a linear collection of elements. You can access elements using their index.
+    <p>Explanation: A one-dimensional array is a simple list of elements. Each element has an index, starting from 0 for the first element. You can access and manipulate elements using their indices. For example, `myArray[0]` refers to the first element.</p>
+    <hr>
+
+    <mark>Two-Dimensional Array:</mark> A two-dimensional array is a matrix-like collection of elements. You use two indices to access elements, representing rows and columns.
+    <p>Explanation: A two-dimensional array is like a table with rows and columns. You need two indices to access elements, one for the row and one for the column. For example, `matrix[2][3]` accesses the element in the third row and fourth column.</p>
+    <hr>
+
+    <mark>String Operations:</mark> Strings are arrays of characters in C. You can perform operations like finding the length, comparing, concatenating, and copying strings.
+    <p>Explanation: In C, strings are essentially character arrays terminated by a null character '\0'. You can perform various operations on strings, such as finding their length with `strlen()`, comparing them with `strcmp()`, concatenating them with `strcat()`, and copying them with `strcpy()`.</p>
+    <hr>
+
+    <mark>Selection Sort:</mark> Selection sort is a sorting algorithm that repeatedly selects the minimum element and moves it to the beginning of the array.
+    <p>Explanation: Selection sort is a simple sorting algorithm. It works by dividing the array into two parts: the sorted part on the left and the unsorted part on the right. In each iteration, it finds the minimum element in the unsorted part and moves it to the sorted part.</p>
+    <hr>
+
+    <mark>Linear Search:</mark> Linear search is a simple searching algorithm that checks each element in an array to find a specific value.
+    <p>Explanation: Linear search, also known as sequential search, involves checking each element in the array one by one until the desired element is found. It's simple but not the most efficient for large arrays.</p>
+    <hr>
+
+    <mark>Binary Search:</mark> Binary search is a more efficient searching algorithm for sorted arrays, where it repeatedly divides the search interval in half.
+    <p>Explanation: Binary search is an efficient search algorithm, but it requires that the array be sorted. It works by repeatedly dividing the search interval in half, reducing the search space with each step. It's much faster than linear search for large sorted arrays.</p>
+  </div>
+
+
+  <h2>Concept 2: Declaration and Initialization of Arrays</h2>
+  <div>
+    <mark>Declaration and Initialization of Arrays:</mark> In C, arrays are declared by specifying the data type of the elements and the number of elements in square brackets. You can initialize arrays during declaration or later in your code.
+  
+    <p><strong>Explanation:</strong> Arrays are a fundamental data structure in C that allows you to store multiple elements of the same data type in a contiguous block of memory. When declaring an array, you specify its data type and the number of elements it can hold. Here's the basic syntax for declaring an array:</p>
+  
+    <pre>
+      <code>
+  int myArray[5]; // Declaring an integer array that can hold 5 integers.
+      </code>
+    </pre>
+  
+    <p>You can also initialize the array with values during declaration, like this:</p>
+  
+    <pre>
+      <code>
+  int numbers[3] = {1, 2, 3}; // Initializing an integer array with values.
+      </code>
+    </pre>
+  
+    <p>Accessing elements in an array is done using their indices, starting from 0. For example, <code>myArray[0]</code> refers to the first element.</p>
+  
+    <p><strong>Examples:</strong></p>
+    <pre>
+      <code>
+  int numbers[5]; // Declare an integer array with 5 elements.
+  numbers[0] = 10;  // Assign a value to the first element.
+  numbers[1] = 20;  // Assign a value to the second element.
+  numbers[2] = 30;  // Assign a value to the third element.
+  numbers[3] = 40;  // Assign a value to the fourth element.
+  numbers[4] = 50;  // Assign a value to the fifth element.
+      </code>
+    </pre>
+  
+    <p>You can also leave out the array size during initialization, and the compiler will automatically determine it based on the number of values you provide:</p>
+  
+    <pre>
+      <code>
+  int dynamicArray[] = {1, 2, 3, 4, 5}; // Compiler automatically determines the array size.
+      </code>
+    </pre>
+    <hr>
+  </div>
+  <h2>Concept 3: One-dimensional Array Operations</h2>
+<div>
+  <mark>One-dimensional Array Operations:</mark> One-dimensional arrays are commonly used in C to store and manipulate data. You can perform various operations on one-dimensional arrays, such as accessing elements, modifying elements, and iterating through the array.
+
+  <p><strong>Accessing Elements:</strong> You can access elements in a one-dimensional array by using their indices. Array indices start at 0, so the first element is accessed using index 0, the second element with index 1, and so on.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+int numbers[5] = {10, 20, 30, 40, 50};
+int firstNumber = numbers[0]; // Access the first element.
+int secondNumber = numbers[1]; // Access the second element.
+    </code>
+  </pre>
+
+  <p><strong>Modifying Elements:</strong> You can change the value of elements in an array by assigning a new value to the specific index.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+int numbers[3] = {5, 10, 15};
+numbers[1] = 25; // Modify the second element.
+    </code>
+  </pre>
+
+  <p><strong>Iterating Through an Array:</strong> You can use loops like 'for' or 'while' to iterate through the elements of an array. This is useful for performing operations on all elements.</p>
+
+  <p><strong>Example using a 'for' loop:</strong></p>
+  <pre>
+    <code>
+int numbers[5] = {1, 2, 3, 4, 5};
+for (int i = 0; i < 5; i++) {
+    // Access and perform operations on each element.
+    printf("Element %d: %d\n", i, numbers[i]);
+}
+    </code>
+  </pre>
+
+  <p><strong>Example using a 'while' loop:</strong></p>
+  <pre>
+    <code>
+int values[4] = {10, 20, 30, 40};
+int index = 0;
+while (index < 4) {
+    // Access and perform operations on each element.
+    printf("Element %d: %d\n", index, values[index]);
+    index++;
+}
+    </code>
+  </pre>
+</div>
+<h2> Concept 4: Two-dimensional Arrays</h2>
+<div>
+  <mark>Two-dimensional Arrays:</mark> Two-dimensional arrays in C are used to store data in a tabular format. They have rows and columns, making them suitable for representing matrices, grids, and tables. You can perform various operations on two-dimensional arrays.
+
+  <p><strong>Declaration and Initialization:</strong> Two-dimensional arrays are declared by specifying both the number of rows and columns. You can initialize them during declaration or later in your code.</p>
+
+  <p><strong>Example:</strong></p>
+
+
+  <p><strong>Accessing Elements:</strong> Accessing elements in a two-dimensional array requires specifying both row and column indices.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+
+    </code>
+  </pre>
+
+  <p><strong>Iterating Through a Two-dimensional Array:</strong> You can use nested loops to traverse and manipulate all elements in a two-dimensional array.</p>
+
+  <p><strong>Example using nested 'for' loops:</strong></p>
+  <pre>
+    <code>
+int rows = 3;
+int columns = 3;
+
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < columns; j++) {
+        // Access and perform operations on each element.
+        printf("Element (%d, %d): %d\n", i, j, matrix[i][j]);
+    }
+}
+    </code>
+  </pre>
+
+  <p><strong>Common Applications:</strong> Two-dimensional arrays are commonly used to represent game boards, spreadsheet data, images, and more.</p>
+</div>
+<h2>Concept 5: String Operations</h2>
+<div>
+  <mark>String Operations:</mark> In C, strings are sequences of characters. You can perform various operations on strings to manipulate and work with text data.
+
+  <p><strong>Length of a String:</strong> To find the length of a string, you can use the `strlen` function from the standard library.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;string.h&gt;
+
+char text[] = "Hello, World!";
+int length = strlen(text); // Get the length of the string.
+    </code>
+  </pre>
+
+  <p><strong>String Comparison:</strong> You can compare strings using functions like `strcmp`, which compares two strings lexicographically.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;string.h&gt;
+
+char str1[] = "apple";
+char str2[] = "banana";
+int result = strcmp(str1, str2); // Compare two strings.
+    </code>
+  </pre>
+
+  <p><strong>String Concatenation:</strong> You can concatenate (combine) strings using functions like `strcat` or by using string concatenation operators.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;string.h&gt;
+
+char dest[100] = "Hello, ";
+char source[] = "World!";
+strcat(dest, source); // Concatenate the strings.
+    </code>
+  </pre>
+
+  <p><strong>String Copy:</strong> You can copy a string to another string using functions like `strcpy` or by simply assigning one string to another.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;string.h&gt;
+
+char source[] = "Copy this.";
+char destination[20];
+strcpy(destination, source); // Copy the string to another.
+    </code>
+  </pre>
+
+  <p><strong>Note:</strong> When working with strings in C, ensure that you have enough memory allocated for the destination string to prevent buffer overflows.</p>
+</div>
+<h2>Concept 6: Selection Sort</h2>
+<div>
+  <mark>Selection Sort:</mark> Selection sort is a simple sorting algorithm that works by repeatedly selecting the minimum element from an unsorted portion of an array and moving it to the sorted portion. It is an in-place comparison-based sorting algorithm.
+
+  <p><strong>Algorithm:</strong> The selection sort algorithm can be described in the following steps:
+  </p>
+
+  <pre>
+    <code>
+- Divide the array into two subarrays: sorted and unsorted.
+- Initially, the sorted subarray is empty, and the unsorted subarray contains all elements.
+- Find the minimum element in the unsorted subarray.
+- Swap it with the leftmost unsorted element.
+- Move the boundary between the sorted and unsorted subarrays one element to the right.
+- Repeat the process until the entire array is sorted.
+    </code>
+  </pre>
+
+  <p><strong>Example:</strong> Here is an example of selection sort in C:</p>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+void selectionSort(int arr[], int size) {
+    int i, j, minIndex, temp;
+    for (i = 0; i &lt; size - 1; i++) {
+        minIndex = i;
+        for (j = i + 1; j &lt; size; j++) {
+            if (arr[j] &lt; arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i) {
+            temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    selectionSort(arr, size);
+    printf("Sorted array: ");
+    for (int i = 0; i &lt; size; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p><strong>Complexity:</strong> Selection sort has a time complexity of O(n^2) for the worst and average cases, which makes it inefficient for large lists. It is primarily used for educational purposes and understanding sorting algorithms.
+  </p>
+</div>
+<h2>Concept 7: Linear and Binary Search</h2>
+<div>
+  <mark>Linear Search:</mark> Linear search, also known as sequential search, is a simple searching algorithm used to find a specific element within a list or array. It works by checking each element one by one until a match is found or the end of the list is reached.
+
+  <p><strong>Algorithm:</strong> The linear search algorithm can be described as follows:</p>
+
+  <pre>
+    <code>
+- Start at the beginning of the list.
+- Compare the target element with the current element.
+- If the elements match, return the index.
+- If the end of the list is reached without a match, return a "not found" indicator.
+    </code>
+  </pre>
+
+  <p><strong>Example:</strong> Here is an example of a linear search in C:</p>
+
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i &lt; size; i++) {
+        if (arr[i] == target) {
+            return i; // Element found, return its index.
+        }
+    }
+    return -1; // Element not found.
+}
+
+int main() {
+    int arr[] = {5, 10, 15, 20, 25, 30};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 15;
+    int result = linearSearch(arr, size, target);
+    if (result != -1) {
+        printf("Element found at index %d\n", result);
+    } else {
+        printf("Element not found\n");
+    }
+    return 0;
+}
+    </code>
+  </pre>
+
+  <mark>Binary Search:</mark> Binary search is an efficient searching algorithm used for sorted arrays. It works by repeatedly dividing the search interval in half, reducing the search space.
+
+  <p><strong>Algorithm:</strong> The binary search algorithm can be described as follows:</p>
+
+  <pre>
+    <code>
+- Start with the entire sorted array.
+- Compare the target element with the middle element.
+- If they match, return the index.
+- If the target is smaller, continue searching in the left half.
+- If the target is larger, continue searching in the right half.
+- Repeat until the element is found or the search space is empty.
+    </code>
+  </pre>
+
+  <p><strong>Example:</strong> Here is an example of a binary search in C:</p>
+
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int binarySearch(int arr[], int left, int right, int target) {
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) {
+            return mid; // Element found, return its index.
+        }
+        if (arr[mid] &lt; target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1; // Element not found.
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50, 60};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 30;
+    int result = binarySearch(arr, 0, size - 1, target);
+    if (result != -1) {
+        printf("Element found at index %d\n", result);
+    } else {
+        printf("Element not found\n");
+    }
+    return 0;
+}
+    </code>
+  </pre>
+  
+  <p><strong>Complexity:</strong> Linear search has a time complexity of O(n), making it suitable for small lists. Binary search has a time complexity of O(log n) and is ideal for large sorted lists.
+  </p>
+</div>
+<h2>Concept 8: Arrays and Strings Operations</h2>
+<div>
+  <mark>Arrays and Strings Operations:</mark> 
+  In this concept, we will explore various string operations in C, including length determination, comparison, concatenation, and copying.
+
+  <h3>String Length:</h3>
+  <p>String length refers to finding the number of characters in a string. In C, you can use the `strlen` function from the `string.h` library to get the length of a string.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[] = "Hello, World!";
+    int length = strlen(str);
+    printf("Length of the string: %d\n", length);
+    return 0;
+}
+    </code>
+  </pre>
+
+  <h3>String Comparison:</h3>
+  <p>String comparison is used to determine if two strings are equal or which one is lexicographically greater. You can use the `strcmp` function to compare two strings.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[] = "apple";
+    char str2[] = "banana";
+    int result = strcmp(str1, str2);
+    if (result == 0) {
+        printf("Strings are equal\n");
+    } else if (result < 0) {
+        printf("str1 is lexicographically smaller than str2\n");
+    } else {
+        printf("str2 is lexicographically smaller than str1\n");
+    }
+    return 0;
+}
+    </code>
+  </pre>
+
+  <h3>String Concatenation:</h3>
+  <p>String concatenation is used to combine two or more strings into one. In C, you can use the `strcat` function from the `string.h` library for this purpose.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[] = "Hello, ";
+    char str2[] = "World!";
+    strcat(str1, str2);
+    printf("Concatenated string: %s\n", str1);
+    return 0;
+}
+    </code>
+  </pre>
+
+  <h3>String Copy:</h3>
+  <p>String copying is used to duplicate a string. You can use the `strcpy` function from the `string.h` library to copy one string to another.</p>
+
+  <p><strong>Example:</strong></p>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char source[] = "Copy me!";
+    char destination[20];
+    strcpy(destination, source);
+    printf("Copied string: %s\n", destination);
+    return 0;
+}
+    </code>
+  </pre>
+</div>
+<h2>Concept 9: Selection Sort</h2>
+<div>
+  <mark>Selection Sort:</mark> Selection sort is a simple comparison-based sorting algorithm. It works by dividing the input into a sorted and an unsorted region. The algorithm repeatedly selects the minimum element from the unsorted region and moves it to the end of the sorted region.
+
+  <p><strong>Algorithm:</strong> The selection sort algorithm can be described as follows:</p>
+
+  <pre>
+    <code>
+- Divide the input into two regions: sorted and unsorted.
+- Find the minimum element in the unsorted region.
+- Swap the minimum element with the first element of the unsorted region.
+- Expand the sorted region by one element.
+- Repeat the above steps until the entire array is sorted.
+    </code>
+  </pre>
+
+  <p><strong>Example:</strong> Here is an example of selection sort in C:</p>
+
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+void selectionSort(int arr[], int size) {
+    for (int i = 0; i &lt; size - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j &lt; size; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("Original array: ");
+    for (int i = 0; i &lt; size; i++) {
+        printf("%d ", arr[i]);
+    }
+    selectionSort(arr, size);
+    printf("\nSorted array: ");
+    for (int i = 0; i &lt; size; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p><strong>Complexity:</strong> Selection sort has a time complexity of O(n^2), which makes it inefficient for large datasets. It is primarily used for educational purposes and not suitable for sorting large arrays.
+  </p>
+</div>
+<h2>Concept 10: Linear and Binary Search</h2>
+<div>
+  <mark>Linear and Binary Search:</mark> In this concept, we will explore two common searching algorithms: Linear Search and Binary Search.
+
+  <h3>Linear Search:</h3>
+  <p>Linear search is a simple searching algorithm that iterates through an array to find a target element. It works well for small lists but is not efficient for large datasets.</p>
+
+  <p><strong>Algorithm:</strong> The linear search algorithm can be described as follows:</p>
+
+  <pre>
+    <code>
+- Start from the beginning of the array.
+- Compare each element with the target value.
+- If the element matches the target, return its index.
+- If the end of the array is reached and no match is found, return -1 (indicating not found).
+    </code>
+  </pre>
+
+  <p><strong>Example:</strong> Here is an example of linear search in C:</p>
+
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i &lt; size; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 30;
+    int result = linearSearch(arr, size, target);
+    if (result != -1) {
+        printf("Element found at index: %d\n", result);
+    } else {
+        printf("Element not found.\n");
+    }
+    return 0;
+}
+    </code>
+  </pre>
+
+  <h3>Binary Search:</h3>
+  <p>Binary search is an efficient searching algorithm that works on sorted arrays. It repeatedly divides the search interval in half and narrows down the search range to find the target element.</p>
+
+  <p><strong>Algorithm:</strong> The binary search algorithm can be described as follows:</p>
+
+  <pre>
+    <code>
+- Start with the entire sorted array.
+- Compare the target value with the middle element.
+- If the middle element is the target, return its index.
+- If the target is smaller, search in the left half of the array.
+- If the target is larger, search in the right half of the array.
+- Repeat until the target is found or the search range becomes empty (indicating not found).
+    </code>
+  </pre>
+
+  <p><strong>Example:</strong> Herei s an example of binary search in C:</p>
+
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int binarySearch(int arr[], int size, int target) {
+    int left = 0;
+    int right = size - 1;
+
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) {
+            return mid;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 30;
+    int result = binarySearch(arr, size, target);
+    if (result != -1) {
+        printf("Element found at index: %d\n", result);
+    } else {
+        printf("Element not found.\n");
+    }
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p><strong>Complexity:</strong> Linear search has a time complexity of O(n), while binary search has a time complexity of O(log n). Binary search is much more efficient for sorted arrays.
+  </p>
+</div>
+<a href="/unit1" class="button">UNIT 1</a>
+<a href="unit3" class="button">UNIT 3</a>
+</body>
+
+</html>

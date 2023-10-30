@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+
+    h2 {
+        text-align: center;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        height: auto;
+        width: auto;
+    }
+    
+    pre {
+        background-color: teal;
+        border-style: solid;
+        border-width: 5px;
+        padding: 5px 5px;
+    }
+    
+    ul {
+        background-color: lightgreen;
+        border-style: solid;
+        border-width: medium;
+        width: auto;
+        height: auto;
+        border-width: 5px;
+        padding: 20px 35px;
+    }
+    
+    mark {
+        background-color: lime;
+        text-transform: capitalize;
+    }
+    
+    li {
+        color: red;
+    }
+    
+    p {
+        background-colour:; /* not defined here */
+        text-color: white;
+        line-height: 1.6;
+        text-transform: capitalize;
+    }
+    
+    div {
+        background-color: slategrey;
+        border-style: solid;
+        border-width: medium;
+        text-align: justify;
+        border-width: 3;
+        height: auto;
+        width: auto;
+        padding: 20px 10px 20px 10px;
+    }
+    
+    table, th, td {
+        border: 1px solid;
+    }
+    
+    table(
+    
+    )
+    
+    th {
+        background-color: dodgerblue;
+    }
+    
+    td {
+        background-color: mediumseagreen
+    }
+    
+    .fa {
+        padding: 20px;
+        font-size: 20px;
+        width: 200px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+    
+    .fa-instagram {
+        background-image: linear-gradient(135deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFC045, #FFDC80);
+        color: black;
+        height: auto;
+        width: auto;
+        position: relative;
+        top: 5px;
+        left: 22px;
+        bottom: 10px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<head>
+
+</head>
+
+<body style="background-color: aqua;">
+  <h1 style="text-align:center";>UNIT - 3</h1>
+
+  <a href="https://instagram.com/romeo_sk_ks?igshid=YTQwZjQ0NmI0OA=="class="fa fa-instagram">--ASK YOUR DOUBTS HERE!!</a>
+
+  <br><br>
+ 
+
+  <h2>Concept 1: Modular Programming</h2>
+  <div>
+    <mark>Modular Programming:</mark> Modular programming is a software design technique that divides a program into separate modules or functions, each responsible for a specific task. This approach promotes code reusability, maintainability, and collaboration.
+  
+    <h3>Key Aspects of Modular Programming:</h3>
+    <ul>
+      <li>**Dividing Code:** In modular programming, you divide your code into smaller, self-contained modules. Each module should have a clear and distinct purpose.</li>
+      <li>**Code Reusability:** By creating modular code, you can reuse these modules in different parts of your program or in other projects, saving time and effort.</li>
+      <li>**Maintainability:** Modular code is easier to maintain and debug. When an issue arises, you can focus on the specific module without affecting the entire program.</li>
+      <li>**Collaboration:** Modular programming is beneficial when multiple developers are working on a project. Each developer can focus on different modules, making collaboration smoother.</li>
+    </ul>
+  
+    <h3>Example: Modular Programming in C</h3>
+    <pre>
+      <code>
+  #include &lt;stdio.h&gt;
+  
+  // Function to add two numbers
+  int add(int a, int b) {
+      return a + b;
+  }
+  
+  // Function to subtract two numbers
+  int subtract(int a, int b) {
+      return a - b;
+  }
+  
+  int main() {
+      int num1 = 10;
+      int num2 = 5;
+  
+      // Using the 'add' function
+      int result1 = add(num1, num2);
+      printf("Result of addition: %d\n", result1);
+  
+      // Using the 'subtract' function
+      int result2 = subtract(num1, num2);
+      printf("Result of subtraction: %d\n", result2);
+  
+      return 0;
+  }
+      </code>
+    </pre>
+  
+    <p>In this C programming example, we've created two functions, 'add' and 'subtract,' each responsible for a specific mathematical operation. This modular approach keeps the main code clean and organized, with the ability to reuse these functions elsewhere in the program.</p>
+  
+    <p>Modular programming is a fundamental practice in software development, making code more manageable, maintainable, and collaborative.</p>
+  </div>
+  <h2>Concept 2: Function Prototype</h2>
+  <div>
+    <mark>Function Prototype:</mark> A function prototype is a declaration that tells the compiler about a function's name, return type, and parameters. It's used to inform the compiler about the existence of a function before its actual definition.
+  
+    <h3>Key Aspects of Function Prototypes:</h3>
+    <ul>
+      <li>**Declaration:** Function prototypes are usually declared at the beginning of a C program to provide the compiler with information about the functions used in the program.</li>
+      <li>**Function Name:** The prototype includes the name of the function, allowing the compiler to recognize it.</li>
+      <li>**Return Type:** The return type specifies the data type of the value the function will return, such as `int`, `void`, etc.</li>
+      <li>**Parameters:** If the function takes parameters, the prototype lists the number and data types of the parameters, allowing the compiler to check for correct usage.</li>
+    </ul>
+  
+    <h3>Example: Function Prototype in C</h3>
+    <pre>
+      <code>
+  #include &lt;stdio.h&gt;
+  
+  // Function prototype for 'add' function
+  int add(int a, int b);
+  
+  int main() {
+      int num1 = 10;
+      int num2 = 5;
+  
+      // Using the 'add' function
+      int result = add(num1, num2);
+      printf("Result of addition: %d\n", result);
+  
+      return 0;
+  }
+  
+  // Function definition for 'add' function
+  int add(int a, int b) {
+      return a + b;
+  }
+      </code>
+    </pre>
+  
+    <p>In this example, the function prototype for the 'add' function is declared before the 'main' function. This informs the compiler about the 'add' function's name, return type, and parameters, allowing the 'main' function to use it.</p>
+  
+    <p>Function prototypes are essential for ensuring proper function usage and order in a C program.</p>
+  </div>
+<h2>Concept 3: Function Definition</h2>
+<div>
+  <mark>Function Definition:</mark> In C programming, a function definition provides the actual implementation of a function. It includes the code that defines what the function does when it's called.
+
+  <h3>Key Aspects of Function Definitions:</h3>
+  <ul>
+    <li>**Implementation:** The function definition contains the actual code that performs the intended task of the function.</li>
+    <li>**Function Name:** The name of the function must match the name provided in the function prototype and be unique in the program.</li>
+    <li>**Return Statement:** If the function returns a value, the definition must include a 'return' statement that specifies what is returned.</li>
+    <li>**Parameters:** If the function takes parameters, their data types and names should match those declared in the prototype.</li>
+  </ul>
+
+  <h3>Example: Function Definition in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+// Function prototype for 'add' function
+int add(int a, int b);
+
+int main() {
+    int num1 = 10;
+    int num2 = 5;
+
+    // Using the 'add' function
+    int result = add(num1, num2);
+    printf("Result of addition: %d\n", result);
+
+    return 0;
+}
+
+// Function definition for 'add' function
+int add(int a, int b) {
+    return a + b;
+}
+    </code>
+  </pre>
+
+  <p>In this example, the 'add' function is defined with its implementation provided after the 'main' function. The definition specifies how the addition operation is performed, including the 'return' statement.</p>
+
+  <p>Function definitions are crucial for providing the logic and functionality of the functions used in a C program.</p>
+</div>
+<h2>Concept 4: Function Call</h2>
+<div>
+  <mark>Function Call:</mark> In C programming, a function call is the act of invoking or executing a function that has been defined and possibly prototyped. It involves passing arguments to the function and receiving a return value, if applicable.
+
+  <h3>Key Aspects of Function Calls:</h3>
+  <ul>
+    <li>**Calling Function:** The function call specifies the name of the function to be executed.</li>
+    <li>**Arguments:** Function calls may include arguments (values or variables) that are passed to the function for processing.</li>
+    <li>**Return Value:** If the function returns a value, the call may store that value in a variable or use it directly.</li>
+  </ul>
+
+  <h3>Example: Function Call in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+// Function prototype for 'add' function
+int add(int a, int b);
+
+int main() {
+    int num1 = 10;
+    int num2 = 5;
+
+    // Calling the 'add' function and storing the result
+    int result = add(num1, num2);
+
+    printf("Result of addition: %d\n", result);
+
+    return 0;
+}
+
+// Function definition for 'add' function
+int add(int a, int b) {
+    return a + b;
+}
+    </code>
+  </pre>
+
+  <p>In this example, the 'add' function is called within the 'main' function with two arguments, and the result is stored in the 'result' variable. The function call triggers the execution of the 'add' function and returns the sum of the arguments.</p>
+
+  <p>Function calls are used to invoke specific functionality and obtain results within a C program.</p>
+</div>
+<h2>Concept 5: Built-in Functions</h2>
+<div>
+  <mark>Built-in Functions (String Functions, Math Functions):</mark> In C programming, built-in functions are functions provided by the C Standard Library that offer a wide range of pre-implemented functionality. They are accessible by including the appropriate header files and calling them when needed.
+
+  <h3>Key Aspects of Built-in Functions:</h3>
+  <ul>
+    <li>**Header Files:** To use built-in functions, you need to include the relevant header files, such as `<string.h>` for string functions and `<math.h>` for math functions.</li>
+    <li>**Function Calls:** Built-in functions are called just like user-defined functions. You pass arguments to them, and they return results.</li>
+    <li>**Examples:** Common examples include `strlen()` for string length and `sqrt()` for square root calculations.</li>
+  </ul>
+
+  <h3>Example: Using Built-in Functions in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt; // Include string functions
+#include &lt;math.h&gt;   // Include math functions
+
+int main() {
+    char text[] = "Hello, World!";
+    int length = strlen(text);
+
+    printf("String Length: %d\n", length);
+
+    double number = 25.0;
+    double squareRoot = sqrt(number);
+
+    printf("Square Root: %lf\n", squareRoot);
+
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, the `<string.h>` and `<math.h>` header files are included, allowing us to use the `strlen()` and `sqrt()` functions. The code demonstrates how to call these built-in functions and use their results.</p>
+
+  <p>Built-in functions provide ready-made solutions for common tasks and calculations in C programming.</p>
+</div>
+<h2>Concept 6: Recursion</h2>
+<div>
+  <mark>Recursion:</mark> Recursion is a programming technique in which a function calls itself to solve a problem. In C programming, recursive functions are used to break down complex problems into smaller, more manageable subproblems.
+
+  <h3>Key Aspects of Recursion:</h3>
+  <ul>
+    <li>**Base Case:** Recursive functions have a base case that defines when the recursion should stop. Without a base case, the function would call itself indefinitely.</li>
+    <li>**Recursive Case:** In the recursive case, the function calls itself with modified parameters to make progress toward the base case.</li>
+    <li>**Example:** A classic example of recursion is the calculation of factorial or Fibonacci sequences using recursive functions.</li>
+  </ul>
+
+  <h3>Example: Recursive Function in C (Factorial Calculation)</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+// Function prototype for 'factorial' function
+unsigned long long factorial(int n);
+
+int main() {
+    int num = 5;
+    unsigned long long fact = factorial(num);
+
+    printf("Factorial of %d is %llu\n", num, fact);
+
+    return 0;
+}
+
+// Recursive function to calculate factorial
+unsigned long long factorial(int n) {
+    if (n <= 1) {
+        return 1; // Base case
+    } else {
+        return n * factorial(n - 1); // Recursive case
+    }
+}
+    </code>
+  </pre>
+
+  <p>In this example, the 'factorial' function is defined recursively to calculate the factorial of a number. The base case is when 'n' is 1 or less, and the recursive case reduces 'n' with each call.</p>
+
+  <p>Recursion is a powerful technique for solving problems that can be broken down into smaller, similar subproblems.</p>
+</div>
+<h2>Concept 7: Binary Search using Recursive Functions</h2>
+<div>
+  <mark>Binary Search using Recursive Functions:</mark> Binary search is a widely used search algorithm that divides a sorted array into two halves and recursively searches for a target value. In C programming, binary search is often implemented using recursive functions.
+
+  <h3>Key Aspects of Binary Search using Recursion:</h3>
+  <ul>
+    <li>**Sorted Data:** Binary search works on sorted data. The array or list must be sorted in ascending or descending order.</li>
+    <li>**Divide and Conquer:** Binary search divides the data into halves, reducing the search space with each recursive call.</li>
+    <li>**Efficiency:** Binary search is efficient for large datasets, as it narrows down the search space quickly.</li>
+  </ul>
+
+  <h3>Example: Binary Search with Recursive Function in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+// Function prototype for binary search
+int binarySearch(int arr[], int left, int right, int target);
+
+int main() {
+    int data[] = {1, 3, 5, 7, 9, 11, 13, 15};
+    int n = sizeof(data) / sizeof(data[0]);
+    int target = 7;
+
+    int result = binarySearch(data, 0, n - 1, target);
+
+    if (result != -1) {
+        printf("Element found at index %d.\n", result);
+    } else {
+        printf("Element not found.\n");
+    }
+
+    return 0;
+}
+
+// Recursive function for binary search
+int binarySearch(int arr[], int left, int right, int target) {
+    if (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) {
+            return mid;
+        }
+        if (arr[mid] > target) {
+            return binarySearch(arr, left, mid - 1, target);
+        }
+        return binarySearch(arr, mid + 1, right, target);
+    }
+    return -1;
+}
+    </code>
+  </pre>
+
+  <p>This example demonstrates a binary search on a sorted array. The `binarySearch` function is called recursively to find the target element's index, if it exists in the array.</p>
+
+  <p>Binary search using recursion is a powerful algorithm for efficiently locating elements in sorted data.</p>
+</div>
+<h2>Concept 8: Pointers</h2>
+<div>
+  <mark>Pointers:</mark> Pointers are variables that store memory addresses. They are a fundamental concept in C programming, allowing you to work with memory, data structures, and functions more efficiently. Understanding pointers is crucial for advanced programming.
+
+  <h3>Key Aspects of Pointers:</h3>
+  <ul>
+    <li>**Memory Addresses:** Pointers store memory addresses, pointing to the location of data in memory.</li>
+    <li>**Pointer Variables:** Pointer variables are declared with a data type and are used to reference data of that type.</li>
+    <li>**Pointer Arithmetic:** Pointers can be incremented and decremented, allowing navigation through memory.</li>
+    <li>**Dereferencing:** The `*` operator is used to access the value pointed to by a pointer.</li>
+  </ul>
+
+  <h3>Example: Using Pointers in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 42;
+    int *ptr = &num; // Declare a pointer and initialize it with the address of 'num'
+
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num);
+    printf("Value pointed to by ptr: %d\n", *ptr); // Dereferencing the pointer
+
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, we declare an integer variable `num` and a pointer variable `ptr` that stores the address of `num`. We demonstrate the use of the `*` operator to dereference the pointer and access the value pointed to by `ptr`.</p>
+
+  <p>Pointers are a powerful tool for memory management and manipulating data efficiently in C programming.</p>
+</div>
+<h2>Concept 9: Pointer Operators</h2>
+<div>
+  <mark>Pointer Operators:</mark> Pointer operators are essential tools for working with pointers in C programming. They allow you to manipulate memory addresses and access data stored in those memory locations.
+
+  <h3>Key Pointer Operators:</h3>
+  <ul>
+    <li>**Address-of Operator (&):** Obtains the memory address of a variable.</li>
+    <li>**Dereference Operator (*):** Accesses the value stored at a memory address pointed to by a pointer.</li>
+    <li>**Pointer Arithmetic:** Incrementing and decrementing pointers to navigate memory locations.</li>
+  </ul>
+
+  <h3>Example: Using Pointer Operators in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 42;
+    int *ptr = &num;
+
+    printf("Value of num: %d\n", num);
+    printf("Address of num: %p\n", &num);
+    printf("Value pointed to by ptr: %d\n", *ptr);
+
+    // Using pointer arithmetic
+    ptr++;
+    printf("After increment: Value pointed to by ptr: %d\n", *ptr);
+
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, we illustrate the use of the address-of operator (&) to obtain the memory address of a variable and the dereference operator (*) to access the value stored at that address. Additionally, we demonstrate pointer arithmetic by incrementing the pointer.</p>
+
+  <p>Understanding and using pointer operators is crucial for effective memory management and data manipulation in C.</p>
+</div>
+<h2>Concept 10: Pointer Arithmetic</h2>
+<div>
+  <mark>Pointer Arithmetic:</mark> Pointer arithmetic is a fundamental concept when working with pointers in C. It allows you to navigate memory locations efficiently and manipulate data structures.
+
+  <h3>Key Aspects of Pointer Arithmetic:</h3>
+  <ul>
+    <li>**Incrementing Pointers:** Advancing a pointer to the next memory location.</li>
+    <li>**Decrementing Pointers:** Moving a pointer to the previous memory location.</li>
+    <li>**Arithmetic with Pointers:** Performing arithmetic operations on pointers.</li>
+  </ul>
+
+  <h3>Example: Using Pointer Arithmetic in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // Pointer to the beginning of the array
+
+    printf("Array elements: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *ptr); // Accessing array elements using the pointer
+        ptr++; // Incrementing the pointer
+    }
+    
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, we have an array `arr`, and we use a pointer `ptr` to traverse the array elements by incrementing the pointer. Pointer arithmetic simplifies array traversal and data manipulation.</p>
+
+  <p>Pointer arithmetic is especially useful when working with arrays, strings, and data structures.</p>
+</div>
+<h2>Concept 11: Arrays and Pointers</h2>
+<div>
+  <mark>Arrays and Pointers:</mark> Understanding the relationship between arrays and pointers is crucial in C programming. Arrays are closely related to pointers, and pointers can be used to access array elements efficiently.
+
+  <h3>Key Points:</h3>
+  <ul>
+    <li>**Array Name as a Pointer:** An array name can be treated as a pointer to the first element of the array.</li>
+    <li>**Pointer Arithmetic with Arrays:** You can use pointers to navigate and manipulate array elements.</li>
+  </ul>
+
+  <h3>Example: Working with Arrays and Pointers in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // Pointer to the beginning of the array
+
+    printf("Array elements: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *ptr); // Accessing array elements using the pointer
+        ptr++; // Incrementing the pointer
+    }
+
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, we declare an array `arr` and a pointer `ptr` that points to the first element of the array. We use pointer arithmetic to access and print array elements.</p>
+
+  <p>Understanding the connection between arrays and pointers is essential for efficient data manipulation.</p>
+</div>
+<h2>Concept 12: Array of Pointers</h2>
+<div>
+  <mark>Array of Pointers:</mark> An array of pointers is an array in which each element is a pointer to another data object. This concept is valuable for managing and accessing complex data structures.
+
+  <h3>Key Aspects of Array of Pointers:</h3>
+  <ul>
+    <li>**Creating an Array of Pointers:** Declaring and initializing an array where each element is a pointer.</li>
+    <li>**Using Array of Pointers:** Storing addresses of data objects in the array for efficient access and manipulation.
+    </li>
+  </ul>
+
+  <h3>Example: Working with Array of Pointers in C</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num1 = 10, num2 = 20, num3 = 30;
+    int *ptrArr[3]; // Array of integer pointers
+
+    // Initialize array elements with addresses of variables
+    ptrArr[0] = &num1;
+    ptrArr[1] = &num2;
+    ptrArr[2] = &num3;
+
+    printf("Values using array of pointers: ");
+    for (int i = 0; i < 3; i++) {
+        printf("%d ", *ptrArr[i]); // Access values through pointers
+    }
+
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, we create an array of integer pointers `ptrArr` and initialize its elements with the addresses of `num1`, `num2`, and `num3`. This allows us to efficiently access and manipulate the values stored in these variables.</p>
+
+  <p>Array of pointers is useful for managing complex data structures like arrays of strings or multidimensional arrays.</p>
+</div>
+<h2>Concept 13: Parameter Passing - Pass by Value, Pass by Reference</h2>
+<div>
+  <mark>Parameter Passing: Pass by Value, Pass by Reference:</mark> Understanding how parameters are passed to functions in C is crucial. C supports both "pass by value" and "pass by reference" for parameter passing.
+
+  <h3>Key Aspects of Parameter Passing:</h3>
+  <ul>
+    <li>**Pass by Value:** Function parameters receive a copy of the argument's value. Changes inside the function don't affect the original data.</li>
+    <li>**Pass by Reference:** Function parameters receive the memory address of the argument. Changes inside the function affect the original data.
+    </li>
+  </ul>
+
+  <h3>Example: Parameter Passing in C Functions</h3>
+  <pre>
+    <code>
+#include &lt;stdio.h&gt;
+
+// Function with pass by value
+void modifyValue(int x) {
+    x = x * 2; // Changes are local
+}
+
+// Function with pass by reference
+void modifyReference(int *x) {
+    *x = *x * 2; // Changes affect the original data
+}
+
+int main() {
+    int num = 10;
+
+    // Pass by value
+    modifyValue(num);
+    printf("After pass by value: %d\n", num); // Original data remains unchanged
+
+    // Pass by reference
+    modifyReference(&num);
+    printf("After pass by reference: %d\n", num); // Original data is modified
+
+    return 0;
+}
+    </code>
+  </pre>
+
+  <p>In this example, we have two functions - `modifyValue` (pass by value) and `modifyReference` (pass by reference). We demonstrate how parameter passing affects data inside and outside the functions.</p>
+
+  <p>Understanding parameter passing is essential for controlling data manipulation within functions.</p>
+</div>
+    
+
+<a href="/unit1/unit2" class="button">UNIT 2</a>
+
+</body>
+
+</html>

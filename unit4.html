@@ -1,0 +1,541 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .button {
+      color: red;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    h2 {
+      text-align: center;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      height: auto;
+      width: auto;
+    }
+
+    pre {
+      background-color: teal;
+      border-style: solid;
+      border-width: 5px;
+      padding: 5px 5px;
+      overflow: scroll;
+    }
+
+    ul {
+      background-color: lightgreen;
+      border-style: solid;
+      border-width: medium;
+      width: auto;
+      height: auto;
+      border-width: 5px;
+      padding: 20px 35px;
+    }
+
+    mark {
+      background-color: lime;
+      text-transform: capitalize;
+    }
+
+    li {
+      color: red;
+    }
+
+    p {
+      background-color: ; /*not defined here*/
+      text-color: white;
+      line-height: 1.6;
+      text-transform: capitalize;
+    }
+
+    div {
+      background-color: slategrey;
+      border-style: solid;
+      border-width: medium;
+      text-align: justify;
+      border-width: 3;
+      height: auto;
+      width: auto;
+      padding: 20px 10px 20px 10px;
+    }
+
+    table, th, td {
+      border: 1px solid;
+    }
+
+    table {
+    }
+
+    th {
+      background-color: dodgerblue;
+    }
+
+    td {
+      background-color: mediumseagreen;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 20px;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa-instagram {
+      background-image: linear-gradient(135deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFC045, #FFDC80);
+      color: black;
+      height: auto;
+      width: auto;
+      position: relative;
+      top: 5px;
+      left: 22px;
+      bottom: 10px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+
+  <head>
+  <body style="background-color: aqua;">
+    <h1 style="text-align:center;">UNIT - 4</h1>
+
+    <a href="#" class="fa fa-instagram">--ASK YOUR DOUBTS HERE!!</a>
+
+    <br><br>
+    <!-- Code for the first concept in UNIT IV: STRUCTURES -->
+
+<h2>Introduction to Structures</h2>
+
+<div>
+    <mark>Structures:</mark> In C programming, structures are user-defined data types that allow bundling different types of data under a single name. They provide a way to group variables of different data types and organize them efficiently. The syntax for defining a structure involves the use of the `struct` keyword.
+
+    <p>
+        A structure declaration typically looks like this:
+        <pre>
+            struct Person {
+                char name[50];
+                int age;
+                float height;
+            };
+        </pre>
+        Here, a structure named "Person" is defined with three members: a character array for the name, an integer for age, and a float for height.
+    </p>
+
+    <hr>
+
+    <mark>Declaration of Structures:</mark> To declare a structure, use the `struct` keyword followed by the structure name and a block containing the members of the structure. Each member has a data type and a name.
+
+    <p>
+        To declare variables of the structure type, use the structure name followed by the variable name:
+        <pre>
+            struct Person person1, person2;
+        </pre>
+    </p>
+
+    <hr>
+
+    <mark>Accessing Structure Members:</mark> Once a structure is defined and variables are created, you can access structure members using the dot (.) operator. It allows you to read or modify the values stored in the structure.
+
+    <p>
+        Example of accessing and modifying structure members:
+        <pre>
+            // Initializing structure members
+            person1.age = 25;
+            person1.height = 5.8;
+            
+            // Accessing and printing structure members
+            printf("Age: %d\n", person1.age);
+            printf("Height: %.2f\n", person1.height);
+        </pre>
+    </p>
+
+</div>
+<!-- Code for the second concept in UNIT IV: STRUCTURES - Nested Structures -->
+
+<h2>Nested Structures</h2>
+
+<div>
+    <mark>Nested Structures:</mark> Nested structures refer to the concept of defining a structure within another structure. This allows you to organize data in a hierarchical manner, where the outer structure contains an inner structure as one of its members.
+
+    <p>
+        Example of nested structures:
+        <pre>
+            struct Address {
+                char city[50];
+                char state[50];
+            };
+
+            struct Person {
+                char name[50];
+                int age;
+                struct Address address; // Nested structure
+            };
+        </pre>
+        Here, the "Person" structure contains a nested structure "Address" as one of its members. The "Person" structure has members like name, age, and an "Address" structure.
+    </p>
+
+    <hr>
+
+    <mark>Accessing Members of Nested Structures:</mark> Accessing members of nested structures involves using multiple dot operators. You start by accessing the outer structure member, followed by the dot operator and the inner structure member.
+
+    <p>
+        Example of accessing nested structure members:
+        <pre>
+            // Initializing nested structure members
+            strcpy(person1.address.city, "New York");
+            strcpy(person1.address.state, "NY");
+
+            // Accessing and printing nested structure members
+            printf("City: %s\n", person1.address.city);
+            printf("State: %s\n", person1.address.state);
+        </pre>
+    </p>
+
+</div>
+
+<!-- Code for the next concept in UNIT IV: STRUCTURES - Pointer and Structures -->
+
+<h2>Pointer and Structures</h2>
+
+<div>
+    <mark>Pointer and Structures:</mark> Pointers in C can be used with structures to efficiently manipulate and access structure members. Using pointers allows you to dynamically allocate memory for structures and navigate through complex data structures.
+
+    <p>
+        Example of using pointers with structures:
+        <pre>
+            struct Student {
+                char name[50];
+                int age;
+            };
+
+            struct Student* studentPtr; // Declare a pointer to struct Student
+
+            // Dynamic memory allocation for a structure
+            studentPtr = (struct Student*)malloc(sizeof(struct Student));
+
+            // Accessing structure members using pointers
+            strcpy(studentPtr->name, "John");
+            studentPtr->age = 20;
+
+            // Freeing dynamically allocated memory
+            free(studentPtr);
+        </pre>
+        Here, a pointer to the structure "Student" is declared, memory is dynamically allocated using `malloc`, and structure members are accessed using the arrow operator (->).
+    </p>
+
+    <hr>
+
+    <mark>Advantages of Pointers with Structures:</mark>
+    <ul>
+        <li>Dynamic memory allocation for structures.</li>
+        <li>Passing structures to functions efficiently.</li>
+        <li>Navigating through linked structures.</li>
+    </ul>
+
+</div>
+
+    <!-- Add more sections for other concepts in Unit 4 as needed -->
+
+    <!-- Place this code at the end of your Unit 4 HTML code -->
+
+
+
+
+    <!-- Code for the next concept in UNIT IV: STRUCTURES - Array of Structures -->
+
+<h2>Array of Structures</h2>
+
+<div>
+    <mark>Array of Structures:</mark> In C, you can create arrays of structures to manage multiple instances of structured data. This is useful when dealing with collections of similar data where each element has multiple attributes.
+
+    <p>
+        Example of an array of structures:
+        <pre>
+            struct Book {
+                char title[100];
+                char author[50];
+                int year;
+            };
+
+            struct Book library[5]; // Declare an array of structures
+
+            // Initializing array of structures
+            strcpy(library[0].title, "The C Programming Language");
+            strcpy(library[0].author, "Brian Kernighan");
+            library[0].year = 1978;
+
+            // Accessing and printing array of structures
+            printf("Title: %s\n", library[0].title);
+            printf("Author: %s\n", library[0].author);
+            printf("Year: %d\n", library[0].year);
+        </pre>
+        Here, an array of structures "library" is declared to store information about books. Each element of the array is a structure containing details like title, author, and year.
+    </p>
+
+    <hr>
+
+    <mark>Advantages of Array of Structures:</mark>
+    <ul>
+        <li>Efficiently manage multiple instances of structured data.</li>
+        <li>Facilitates organization and manipulation of data sets.</li>
+        <li>Useful for representing records or entries in a system.</li>
+    </ul>
+
+</div>
+
+
+
+<!-- Code for the next concept in UNIT IV: STRUCTURES - Self-referential Structures -->
+
+<h2>Self-referential Structures</h2>
+
+<div>
+    <mark>Self-referential Structures:</mark> A self-referential structure is a structure that contains a member that is a pointer to the same type of structure. This concept is often used in the implementation of linked lists and hierarchical data structures.
+
+    <p>
+        Example of a self-referential structure (linked list node):
+        <pre>
+            struct Node {
+                int data;
+                struct Node* next; // Pointer to the same type (self-referential)
+            };
+
+            struct Node* head; // Declare a pointer to the first node in the linked list
+
+            // Creating a linked list node
+            struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+            newNode->data = 42;
+            newNode->next = NULL;
+        </pre>
+        Here, a structure "Node" is defined with an integer data member and a pointer to the same structure type, creating a self-referential structure. This example demonstrates a linked list node where each node points to the next node.
+    </p>
+
+    <hr>
+
+    <mark>Applications of Self-referential Structures:</mark>
+    <ul>
+        <li>Implementation of linked data structures.</li>
+        <li>Representation of hierarchical relationships.</li>
+        <li>Building trees and graphs.</li>
+    </ul>
+
+</div>
+
+
+
+<!-- Code for the next concept in UNIT IV: STRUCTURES - Dynamic Memory Allocation for Structures -->
+
+<h2>Dynamic Memory Allocation for Structures</h2>
+
+<div>
+    <mark>Dynamic Memory Allocation for Structures:</mark> Dynamically allocating memory for structures allows you to manage memory efficiently and handle varying amounts of data. This is particularly useful when dealing with structures whose sizes are not known at compile time.
+
+    <p>
+        Example of dynamic memory allocation for structures:
+        <pre>
+            struct Person {
+                char name[50];
+                int age;
+            };
+
+            struct Person* personPtr;
+
+            // Dynamic memory allocation for a structure
+            personPtr = (struct Person*)malloc(sizeof(struct Person));
+
+            // Accessing and modifying structure members
+            strcpy(personPtr->name, "Alice");
+            personPtr->age = 30;
+
+            // Freeing dynamically allocated memory
+            free(personPtr);
+        </pre>
+        Here, a pointer to the structure "Person" is declared, memory is dynamically allocated using `malloc`, and structure members are accessed using the arrow operator (->). Finally, the dynamically allocated memory is freed using `free`.
+    </p>
+
+    <hr>
+
+    <mark>Advantages of Dynamic Memory Allocation:</mark>
+    <ul>
+        <li>Efficient memory usage for variable-sized data.</li>
+        <li>Dynamic creation and management of data structures.</li>
+        <li>Prevents fixed-size limitations during runtime.</li>
+    </ul>
+
+</div>
+
+
+
+
+<!-- Code for the next concept in UNIT IV: STRUCTURES - Singly Linked List -->
+
+<h2>Singly Linked List</h2>
+
+<div>
+    <mark>Singly Linked List:</mark> A singly linked list is a data structure in which each node contains data and a pointer to the next node in the sequence. It provides a dynamic and efficient way to organize and manage data.
+
+    <p>
+        Example of a singly linked list:
+        <pre>
+            struct Node {
+                int data;
+                struct Node* next; // Pointer to the next node
+            };
+
+            struct Node* head; // Declare a pointer to the first node in the linked list
+
+            // Creating a new node
+            struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+            newNode->data = 42;
+            newNode->next = NULL;
+
+            // Adding a node to the linked list
+            newNode->next = head;
+            head = newNode;
+        </pre>
+        Here, a structure "Node" is defined with an integer data member and a pointer to the next node, creating a singly linked list. Nodes are dynamically created, and each node points to the next node in the list.
+    </p>
+
+    <hr>
+
+    <mark>Operations on Singly Linked List:</mark>
+    <ul>
+        <li>Insertion at the beginning, middle, or end of the list.</li>
+        <li>Deletion of nodes from the list.</li>
+        <li>Traversal to access and manipulate data.</li>
+    </ul>
+
+</div>
+
+
+
+<!-- Code for the next concept in UNIT IV: STRUCTURES - typedef -->
+
+<h2>typedef</h2>
+
+<div>
+    <mark>typedef:</mark> The `typedef` keyword in C is used to create a new type alias, providing a way to give a new name to an existing data type. It enhances code readability and can simplify complex declarations.
+
+    <p>
+        Example of using typedef:
+        <pre>
+            // Original declaration without typedef
+            struct Point {
+                int x;
+                int y;
+            };
+
+            // Creating a new type alias using typedef
+            typedef struct Point Point;
+
+            // Now, 'Point' can be used as a type
+            Point p1;
+            p1.x = 10;
+            p1.y = 20;
+        </pre>
+        Here, a structure "Point" is defined, and then a new type alias "Point" is created using `typedef`. This allows using "Point" as a type without the need for the keyword `struct`.
+    </p>
+
+    <hr>
+
+    <mark>Benefits of typedef:</mark>
+    <ul>
+        <li>Enhances code readability by introducing meaningful names.</li>
+        <li>Simplifies complex declarations, especially with structures.</li>
+        <li>Facilitates code maintenance and modifications.</li>
+    </ul>
+
+</div>
+<!-- Code for the next concept in UNIT IV: STRUCTURES - Union -->
+
+<h2>Union</h2>
+
+<div>
+    <mark>Union:</mark> A union in C is a user-defined data type that allows storing different data types in the same memory location. Unlike structures, where each member has its own memory space, union members share the same memory, and the size of the union is determined by the largest member.
+
+    <p>
+        Example of using union:
+        <pre>
+            union Variant {
+                int intValue;
+                float floatValue;
+                char stringValue[20];
+            };
+
+            union Variant data;
+            data.intValue = 42;
+
+            // Accessing union members
+            printf("Integer value: %d\n", data.intValue);
+        </pre>
+        Here, a union "Variant" is defined with members for an integer, a float, and a string. The union is used to store different types of data in the same memory location.
+    </p>
+
+    <hr>
+
+    <mark>Use Cases for Union:</mark>
+    <ul>
+        <li>Economizing memory when only one member is used at a time.</li>
+        <li>Implementing variant records where only one member is valid.</li>
+        <li>Handling situations with multiple interpretations of the same data.</li>
+    </ul>
+
+</div>
+
+
+
+<!-- Code for the next concept in UNIT IV: STRUCTURES - Storage Classes and Visibility -->
+
+<h2>Storage Classes and Visibility</h2>
+
+<div>
+    <mark>Storage Classes:</mark> Storage classes in C define the scope, visibility, and lifetime of variables. There are four main storage classes in C: auto, register, static, and extern.
+
+    <p>
+        Example of using storage classes:
+        <pre>
+            // Auto storage class (default for local variables)
+            void exampleFunction() {
+                auto int localVar = 10;
+            }
+
+            // Register storage class (suggests the use of CPU register)
+            register int regVar = 20;
+
+            // Static storage class (persists throughout program execution)
+            static int staticVar = 30;
+
+            // Extern storage class (used for variables declared in other files)
+            extern int externVar;
+        </pre>
+        Here, different storage classes are demonstrated with examples. The `auto` storage class is used by default for local variables. `register` suggests using a CPU register for faster access. `static` persists throughout the program, and `extern` is used for variables declared in other files.
+    </p>
+
+    <hr>
+
+    <mark>Visibility and Scope:</mark>
+    <ul>
+        <li>Auto and register variables have local scope within the block or function.</li>
+        <li>Static variables have a wider scope and persist throughout the program's execution.</li>
+        <li>Extern variables are declared in one file and can be accessed in another (global visibility).</li>
+    </ul>
+
+</div>
+
+<a href="/unit3" class="button">UNIT 2</a>
+<a href="unit5" class="button">UNIT 5</a>
+  </body>
+</html>

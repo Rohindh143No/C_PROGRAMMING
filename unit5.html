@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .button {
+      color: red;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    h2 {
+      text-align: center;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      height: auto;
+      width: auto;
+    }
+
+    pre {
+      background-color: teal;
+      border-style: solid;
+      border-width: 5px;
+      padding: 5px 5px;
+      overflow: scroll;
+    }
+
+    ul {
+      background-color: lightgreen;
+      border-style: solid;
+      border-width: medium;
+      width: auto;
+      height: auto;
+      border-width: 5px;
+      padding: 20px 35px;
+    }
+
+    mark {
+      background-color: lime;
+      text-transform: capitalize;
+    }
+
+    li {
+      color: red;
+    }
+
+    p {
+      background-color: ; /*not defined here*/
+      text-color: white;
+      line-height: 1.6;
+      text-transform: capitalize;
+    }
+
+    div {
+      background-color: slategrey;
+      border-style: solid;
+      border-width: medium;
+      text-align: justify;
+      border-width: 3;
+      height: auto;
+      width: auto;
+      padding: 20px 10px 20px 10px;
+    }
+
+    table, th, td {
+      border: 1px solid;
+    }
+
+    table {
+    }
+
+    th {
+      background-color: dodgerblue;
+    }
+
+    td {
+      background-color: mediumseagreen;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 20px;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa-instagram {
+      background-image: linear-gradient(135deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFC045, #FFDC80);
+      color: black;
+      height: auto;
+      width: auto;
+      position: relative;
+      top: 5px;
+      left: 22px;
+      bottom: 10px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+
+  <head>
+  <body style="background-color: aqua;">
+    <h1 style="text-align:center;">UNIT - 5</h1>
+
+    <a href="#" class="fa fa-instagram">--ASK YOUR DOUBTS HERE!!</a>
+
+    <br><br>
+
+
+<!-- Code for the first topic in UNIT V: FILE PROCESSING - Files -->
+
+<h2>Files</h2>
+
+<div>
+    <mark>Files:</mark> In C programming, files are used to store data persistently. They provide a way to input and output information beyond the scope of the program's execution.
+
+    <p>
+        Files can be of various types, including text files and binary files. Text files store data in a human-readable format, whereas binary files store data in a format that is not human-readable but more efficient for machine processing.
+    </p>
+
+    <hr>
+
+    <mark>Operations on Files:</mark>
+    <ul>
+        <li><mark>Opening a File:</mark> Before performing any operations on a file, it needs to be opened using functions like fopen(). The opening mode (read, write, append, etc.) is specified during the opening process.</li>
+        <li><mark>Reading from a File:</mark> Data can be read from a file using functions like fscanf(). Reading is typically done in a sequential manner, moving from the beginning to the end of the file.</li>
+        <li><mark>Writing to a File:</mark> Data can be written to a file using functions like fprintf(). Writing can be done in various modes, including overwriting existing content or appending to the end of the file.</li>
+        <li><mark>Closing a File:</mark> After performing operations on a file, it should be closed using functions like fclose(). Closing is essential to release system resources associated with the file.</li>
+    </ul>
+
+</div>
+
+<!-- Code for the next concept in UNIT V: FILE PROCESSING - Types of File Processing -->
+
+<h2>Types of File Processing: Sequential Access, Random Access</h2>
+
+<div>
+    <mark>Types of File Processing:</mark> File processing in C can be categorized into two main types: Sequential Access and Random Access.
+
+    <hr>
+
+    <mark>Sequential Access:</mark>
+    <p>
+        In sequential access file processing, data is read or written sequentially, from start to end. It follows a linear approach, making it suitable for tasks where data is processed in a step-by-step manner.
+    </p>
+
+    <mark>Operations in Sequential Access:</mark>
+    <ul>
+        <li>Reading data from a file sequentially using functions like fscanf().</li>
+        <li>Writing data to a file sequentially using functions like fprintf().</li>
+        <li>Advantages: Simple, easy to implement, and suitable for tasks with a predefined order of processing.</li>
+        <li>Disadvantages: Not suitable for direct access to specific data points.</li>
+    </ul>
+
+    <hr>
+
+    <mark>Random Access:</mark>
+    <p>
+        In random access file processing, data can be accessed at any point in the file. It allows direct access to specific records or data points, providing more flexibility in manipulating file contents.
+    </p>
+
+    <mark>Operations in Random Access:</mark>
+    <ul>
+        <li>Opening and closing a file for random access using functions like fopen() and fclose().</li>
+        <li>Moving the file pointer to a specific location using functions like fseek().</li>
+        <li>Reading and writing data at the current file pointer position.</li>
+        <li>Advantages: Allows direct access to specific data points, suitable for tasks requiring random data retrieval.</li>
+        <li>Disadvantages: More complex than sequential access, may be less efficient for certain operations.</li>
+    </ul>
+
+</div>
+
+
+<!-- Code for the next concept in UNIT V: FILE PROCESSING - Sequential Access File -->
+
+<h2>Sequential Access File</h2>
+
+<div>
+    <mark>Sequential Access File:</mark> A sequential access file is a type of file processing where data is read or written sequentially, from start to end. It is a simple and common method of file processing in C.
+
+    <hr>
+
+    <mark>Operations on Sequential Access File:</mark>
+    <ul>
+        <li><mark>Opening a Sequential Access File:</mark> Before performing any operations on a sequential access file, it needs to be opened using functions like fopen(). The opening mode (read, write, append, etc.) is specified during the opening process.</li>
+        <li><mark>Reading from a Sequential Access File:</mark> Data can be read from a sequential access file using functions like fscanf(). Reading is done sequentially, moving from the beginning to the end of the file.</li>
+        <li><mark>Writing to a Sequential Access File:</mark> Data can be written to a sequential access file using functions like fprintf(). Writing is typically done in a sequential manner, appending to the end of the file.</li>
+        <li><mark>Closing a Sequential Access File:</mark> After performing operations on a sequential access file, it should be closed using functions like fclose(). Closing is essential to release system resources associated with the file.</li>
+        <li><mark>Advantages:</mark> Simple, easy to implement, suitable for tasks where data processing follows a predefined order.</li>
+        <li><mark>Disadvantages:</mark> Not suitable for direct access to specific data points, may be less efficient for certain operations.</li>
+    </ul>
+
+</div>
+
+<!-- Code for the next concept in UNIT V: FILE PROCESSING - Random Access File -->
+
+<h2>Random Access File</h2>
+
+<div>
+    <mark>Random Access File:</mark> A random access file is a type of file processing where data can be accessed at any point in the file. It allows direct access to specific records or data points, providing more flexibility in manipulating file contents.
+
+    <hr>
+
+    <mark>Operations on Random Access File:</mark>
+    <ul>
+        <li><mark>Opening a Random Access File:</mark> Before performing any operations on a random access file, it needs to be opened using functions like fopen(). The opening mode (read, write, append, etc.) is specified during the opening process.</li>
+        <li><mark>Moving the File Pointer:</mark> The file pointer determines the current position in the file. Functions like fseek() are used to move the file pointer to a specific location within the file.</li>
+        <li><mark>Reading and Writing at the Current File Pointer:</mark> Data can be read or written at the current file pointer position using functions like fread() and fwrite().</li>
+        <li><mark>Closing a Random Access File:</mark> After performing operations on a random access file, it should be closed using functions like fclose(). Closing is essential to release system resources associated with the file.</li>
+        <li><mark>Advantages:</mark> Allows direct access to specific data points, suitable for tasks requiring random data retrieval.</li>
+        <li><mark>Disadvantages:</mark> More complex than sequential access, may be less efficient for certain operations.</li>
+    </ul>
+
+</div>
+
+
+
+
+<!-- Code for the next concept in UNIT V: FILE PROCESSING - Command Line Arguments -->
+
+<h2>Command Line Arguments</h2>
+
+<div>
+    <mark>Command Line Arguments:</mark> Command line arguments are parameters passed to a program from the command line when the program is executed. In C programming, the main function can accept command line arguments.
+
+    <hr>
+
+    <mark>Working with Command Line Arguments:</mark>
+    <ul>
+        <li><mark>Main Function with Command Line Arguments:</mark> The main function in C can be declared to accept command line arguments by using the argc (argument count) and argv (argument vector) parameters.</li>
+        <li><mark>argc and argv:</mark> argc holds the number of command line arguments, and argv is an array of strings containing the actual arguments.</li>
+        <li><mark>Accessing Command Line Arguments:</mark> Command line arguments can be accessed by indexing into the argv array. For example, argv[0] is the name of the program, and argv[1] onwards are the actual arguments.</li>
+        <li><mark>Example:</mark> Below is a simple example that prints the program name and any command line arguments passed to it:
+            <pre>
+#include &#8918 stdio.h &#8919
+
+int main(int argc, char *argv[]) {
+    printf("Program Name: %s\n", argv[0]);
+
+    for (int i = 1; i < argc; i++) {
+        printf("Argument %d: %s\n", i, argv[i]);
+    }
+
+    return 0;
+}
+            </pre>
+        </li>
+        <li><mark>Running Programs with Command Line Arguments:</mark> Programs with command line arguments can be run from the command line by providing arguments after the program name.</li>
+        <li><mark>Advantages:</mark> Enables flexibility by allowing users to customize program behavior through input arguments.</li>
+        <li><mark>Limitations:</mark> Command line arguments are passed as strings; conversion to other types may be required for numerical input.</li>
+    </ul>
+
+</div>
+
+
+
+<!-- Code for the next concept in UNIT V: FILE PROCESSING - File Operations in C -->
+
+<h2>File Operations in C</h2>
+
+<div>
+    <mark>File Operations in C:</mark> File operations in C involve various functions to perform tasks such as opening, reading, writing, and closing files. These functions are part of the standard input/output library (stdio.h).
+
+    <hr>
+
+    <mark>Common File Operations:</mark>
+    <ul>
+        <li><mark>fopen():</mark> Opens a file in a specified mode (read, write, append, etc.) and returns a file pointer.</li>
+        <li><mark>fclose():</mark> Closes a file, releasing the associated system resources.</li>
+        <li><mark>fread() and fwrite():</mark> Read and write data from/to a file at the current file pointer position.</li>
+        <li><mark>fseek() and ftell():</mark> Move the file pointer to a specific location and get the current file pointer position.</li>
+        <li><mark>fprintf() and fscanf():</mark> Write formatted data to a file and read formatted data from a file.</li>
+        <li><mark>feof():</mark> Checks if the end-of-file indicator has been reached.</li>
+        <li><mark>Example:</mark> Below is a simple example that demonstrates file operations by reading and writing data to a file:
+            <pre>
+#include &#8918 stdio.h &#8919
+
+int main() {
+    FILE *file;
+    char data[100];
+
+    // Opening a file for writing
+    file = fopen("example.txt", "w");
+
+    if (file != NULL) {
+        // Writing data to the file
+        fprintf(file, "Hello, File!\n");
+
+        // Closing the file
+        fclose(file);
+
+        // Opening the same file for reading
+        file = fopen("example.txt", "r");
+
+        if (file != NULL) {
+            // Reading data from the file
+            fscanf(file, "%[^\n]", data);
+            printf("Data read from the file: %s\n", data);
+
+            // Closing the file
+            fclose(file);
+        } else {
+            printf("Error opening the file for reading.\n");
+        }
+    } else {
+        printf("Error opening the file for writing.\n");
+    }
+
+    return 0;
+}
+            </pre>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/unit4" class="button">UNIT 4</a>
+
+  </body>
+</html>

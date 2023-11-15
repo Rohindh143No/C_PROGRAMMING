@@ -9,6 +9,12 @@ def unit2(request):
     return HttpResponse(template2.render())
 def unit3(request):
     template3=loader.get_template('unit3.html')
+    return HttpResponse(template3.render())    
+def unit4(request):
+    template4=loader.get_template('unit4.html')
+    return HttpResponse(template3.render())
+def unit5(request):
+    template5=loader.get_template('unit5.html')
     return HttpResponse(template3.render())
 
 
